@@ -30,7 +30,7 @@ object Versions {
 
     const val androidx_test: String = "1.3.0"
 
-    const val io_mockk: String = "1.10.4"
+    const val io_mockk: String = "1.11.0"
 
     const val com_android_tools_build_gradle: String = "4.1.1"
 
