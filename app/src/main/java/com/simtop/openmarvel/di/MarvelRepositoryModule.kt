@@ -11,5 +11,5 @@ import dagger.hilt.components.SingletonComponent
 @InstallIn(SingletonComponent::class)
 abstract class MarvelRepositoryModule {
     @Binds
-    abstract fun getBeersRepository(repository: MarvelRepositoryImpl): MarvelRepository
+    abstract fun geMarvelRepository(repository: MarvelRepositoryImpl): MarvelRepository
 }
