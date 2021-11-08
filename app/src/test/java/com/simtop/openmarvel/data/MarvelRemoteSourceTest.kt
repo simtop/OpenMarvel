@@ -7,6 +7,7 @@ import kotlinx.coroutines.runBlocking
 import org.amshove.kluent.shouldBeEqualTo
 import org.junit.Test
 import org.mockito.ArgumentMatchers
+import org.mockito.ArgumentMatchers.anyString
 import java.net.HttpURLConnection
 
 class MarvelRemoteSourceTest : TestMockWebService() {
@@ -21,7 +22,7 @@ class MarvelRemoteSourceTest : TestMockWebService() {
         // Act
 
         val response = runBlocking {
-            apiService.getMarvelCharacters(ArgumentMatchers.anyString(), ArgumentMatchers.anyString(), ArgumentMatchers.anyString(), ArgumentMatchers.anyInt(), ArgumentMatchers.anyInt())
+            apiService.getMarvelCharacters(anyString(), anyString(), anyString(), ArgumentMatchers.anyInt(), ArgumentMatchers.anyInt())
         }
 
         // Assert
@@ -38,7 +39,7 @@ class MarvelRemoteSourceTest : TestMockWebService() {
         // Act
 
         runBlocking {
-            apiService.getMarvelCharacters(ArgumentMatchers.anyString(), ArgumentMatchers.anyString(), ArgumentMatchers.anyString(), ArgumentMatchers.anyInt(), ArgumentMatchers.anyInt())
+            apiService.getMarvelCharacters(anyString(), anyString(), anyString(), ArgumentMatchers.anyInt(), ArgumentMatchers.anyInt())
         }
 
         // Assert
