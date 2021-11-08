@@ -1,0 +1,4 @@
+<resources>
+    <string name="app_name">OpenMarvel</string>
+    <string name="home_fragment_label">Home Fragment</string>
+</resources>
