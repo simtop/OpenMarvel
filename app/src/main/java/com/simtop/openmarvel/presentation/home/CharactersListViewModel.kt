@@ -46,6 +46,10 @@ class CharactersListViewModel @Inject constructor(
             }
         )
     }
+
+    fun showEmptyState() {
+        _charactersListViewState.postValue(CharactersListViewState.EmptyState)
+    }
 }
 
 sealed class CharactersListViewState<out T> {
