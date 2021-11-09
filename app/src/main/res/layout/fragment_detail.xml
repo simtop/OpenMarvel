@@ -3,10 +3,11 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent">
 
-    <androidx.appcompat.widget.AppCompatEditText
+    <androidx.appcompat.widget.AppCompatTextView
+        android:id="@+id/detail_text"
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:text="Detail Fragment">
-    </androidx.appcompat.widget.AppCompatEditText>
+    </androidx.appcompat.widget.AppCompatTextView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
