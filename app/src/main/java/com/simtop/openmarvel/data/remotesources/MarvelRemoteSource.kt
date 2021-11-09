@@ -26,4 +26,18 @@ class MarvelRemoteSource @Inject constructor(private val service: MarvelService)
             limit = limit
         )
     }
+
+    suspend fun getMarvelCharacterDetail(
+        timestamp: String = System.currentTimeMillis().toString(),
+        hash: String = (timestamp + privateApiKey + apiKey).md5(),
+        characterId: Int
+    ): MarvelCharactersResponse {
+
+        return service.getMarvelCharacterDetail(
+            characterId = characterId,
+            timeStamp = timestamp,
+            apiKey = apiKey,
+            hash = hash
+        )
+    }
 }

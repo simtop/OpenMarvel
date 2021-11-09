@@ -6,7 +6,9 @@ import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.navArgs
 import com.simtop.openmarvel.R
 import com.simtop.openmarvel.databinding.FragmentDetailBinding
+import com.simtop.openmarvel.domain.usecases.GetMarvelCharacterDetailUseCase
 import dagger.hilt.android.AndroidEntryPoint
+import javax.inject.Inject
 
 @AndroidEntryPoint
 class DetailFragment : Fragment(R.layout.fragment_detail) {
@@ -16,6 +18,8 @@ class DetailFragment : Fragment(R.layout.fragment_detail) {
 
     private val args: DetailFragmentArgs by navArgs()
 
+    @Inject
+    lateinit var test: GetMarvelCharacterDetailUseCase
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)

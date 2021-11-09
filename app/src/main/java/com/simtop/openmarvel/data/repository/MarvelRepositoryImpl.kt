@@ -3,6 +3,7 @@ package com.simtop.openmarvel.data.repository
 import com.simtop.openmarvel.data.mappers.MarvelMapper
 import com.simtop.openmarvel.data.remotesources.MarvelRemoteSource
 import com.simtop.openmarvel.domain.models.MarvelCharacters
+import com.simtop.openmarvel.domain.models.MarvelHero
 import com.simtop.openmarvel.domain.repository.MarvelRepository
 import javax.inject.Inject
 
@@ -19,4 +20,11 @@ class MarvelRepositoryImpl @Inject constructor(
                 limit = limit
             )
         ).marvelCharacters
+
+    override suspend fun getMarvelCharacterDetail(characterId: Int): MarvelHero =
+        MarvelMapper.fromMarvelCharactersResponseToMarvelCharactersApiDomain(
+            marvelRemoteSource.getMarvelCharacterDetail(
+                characterId = characterId
+            )
+        ).marvelCharacters.marvelHeroResponses[0]
 }
