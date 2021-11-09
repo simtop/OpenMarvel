@@ -33,13 +33,20 @@ class CharacterItemView @JvmOverloads constructor(
         }
     }
 
-    override fun bind(value: MarvelHero) {
+    override fun bind(value: MarvelHero, showDetail: Boolean) {
         with(rowCharacterListBinding) {
             heroName.text = value.name
             Glide.with(context)
                 .load(value.marvelThumbnailUrl.convertUrlToHTTPS())
                 .error(R.drawable.blue_image)
                 .into(heroImage)
+
+            if(showDetail) {
+                with(heroDescription) {
+                    visibility = VISIBLE
+                    text = value.description
+                }
+            }
         }
     }
 }
