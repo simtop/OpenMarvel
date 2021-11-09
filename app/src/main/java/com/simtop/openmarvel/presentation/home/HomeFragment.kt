@@ -5,6 +5,7 @@ import android.os.Bundle
 import androidx.fragment.app.Fragment
 import android.view.View
 import androidx.fragment.app.viewModels
+import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import com.simtop.openmarvel.R
 import com.simtop.openmarvel.core.observe
@@ -95,7 +96,8 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
     }
 
     private fun onHeroClicked(marvelHero: MarvelHero) {
-
+        val action = HomeFragmentDirections.actionHomeFragmentToDetailFragment(marvelHero.id)
+        findNavController().navigate(action)
     }
 
 

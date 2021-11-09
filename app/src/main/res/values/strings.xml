@@ -1,5 +1,6 @@
 <resources>
     <string name="app_name">OpenMarvel</string>
     <string name="home_fragment_label">Home Fragment</string>
+    <string name="detail_fragment_label">Detail Fragment</string>
     <string name="no_connection_empty_state">Please try again when you connect to the internet</string>
 </resources>
