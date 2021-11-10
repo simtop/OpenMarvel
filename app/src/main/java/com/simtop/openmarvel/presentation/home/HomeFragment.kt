@@ -62,8 +62,8 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
         }
     }
 
-    private fun treatViewState(it: CharactersListViewState<MarvelCharacters>) {
-        when (it) {
+    private fun treatViewState(charactersListViewState: CharactersListViewState<MarvelCharacters>) {
+        when (charactersListViewState) {
             CharactersListViewState.EmptyState -> {
                 fragmentHomeBinding.apply {
                     progressBar.visibility = View.GONE
@@ -71,7 +71,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                     emptyState.visibility = View.VISIBLE
                 }
             }
-            is CharactersListViewState.Error -> treatError(it.result)
+            is CharactersListViewState.Error -> treatError(charactersListViewState.result)
             CharactersListViewState.Loading -> {
                 fragmentHomeBinding.apply {
                     progressBar.visibility = View.VISIBLE
@@ -79,7 +79,7 @@ class HomeFragment : Fragment(R.layout.fragment_home) {
                     emptyState.visibility = View.GONE
                 }
             }
-            is CharactersListViewState.Success -> treatSuccess(it.result)
+            is CharactersListViewState.Success -> treatSuccess(charactersListViewState.result)
         }
     }
 

@@ -10,10 +10,10 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/normal_margin"
+        app:layout_constraintBottom_toTopOf="@id/hero_description"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintBottom_toTopOf="@id/hero_description">
+        app:layout_constraintTop_toTopOf="parent">
 
         <androidx.constraintlayout.widget.ConstraintLayout
             android:layout_width="match_parent"
@@ -27,9 +27,9 @@
                 android:layout_height="wrap_content"
                 android:layout_margin="@dimen/big_margin"
                 app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toStartOf="@id/hero_image"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toTopOf="parent"
-                app:layout_constraintEnd_toStartOf="@id/hero_image"
                 tools:text="Iron Man" />
 
             <androidx.appcompat.widget.AppCompatImageView
@@ -52,6 +52,7 @@
         android:layout_margin="@dimen/normal_margin"
         android:background="@color/colorPrimary"
         android:visibility="gone"
+        style="@style/big_text_title"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"

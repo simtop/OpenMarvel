@@ -41,7 +41,7 @@ class CharacterItemView @JvmOverloads constructor(
                 .error(R.drawable.blue_image)
                 .into(heroImage)
 
-            if(showDetail) {
+            if(showDetail && value.description.isNotEmpty()) {
                 with(heroDescription) {
                     visibility = VISIBLE
                     text = value.description
