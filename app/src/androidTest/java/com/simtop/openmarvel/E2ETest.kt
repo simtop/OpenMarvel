@@ -4,7 +4,6 @@ import android.view.View
 import androidx.test.ext.junit.rules.ActivityScenarioRule
 import androidx.test.internal.runner.junit4.AndroidJUnit4ClassRunner
 import com.simtop.openmarvel.presentation.MainActivity
-import com.simtop.openmarvel.robots.detailScreen
 import com.simtop.openmarvel.robots.homeScreen
 import com.simtop.openmarvel.utils.ViewVisibilityIdlingResource
 import dagger.hilt.android.testing.HiltAndroidRule
