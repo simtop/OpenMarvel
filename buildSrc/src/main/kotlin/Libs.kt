@@ -72,12 +72,6 @@ object Libs {
     /**
      * https://kotlinlang.org/
      */
-    const val kotlin_stdlib_jdk7: String = "org.jetbrains.kotlin:kotlin-stdlib-jdk7:" +
-            Versions.org_jetbrains_kotlin
-
-    /**
-     * https://kotlinlang.org/
-     */
     const val kotlin_test_junit: String = "org.jetbrains.kotlin:kotlin-test-junit:" +
             Versions.org_jetbrains_kotlin
 
@@ -211,8 +205,6 @@ object Libs {
      */
     const val lint_gradle: String = "com.android.tools.lint:lint-gradle:" + Versions.lint_gradle
 
-    const val viewbinding: String = "androidx.databinding:viewbinding:" + Versions.viewbinding
-
     /**
      * https://developer.android.com/jetpack/androidx
      */
@@ -229,11 +221,6 @@ object Libs {
     const val material: String = "com.google.android.material:material:" + Versions.material
 
     const val kluent: String = "org.amshove.kluent:kluent:" + Versions.kluent
-
-    /**
-     * https://developer.android.com/studio
-     */
-    const val aapt2: String = "com.android.tools.build:aapt2:" + Versions.aapt2
 
     /**
      * https://github.com/bumptech/glide

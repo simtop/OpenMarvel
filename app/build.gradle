@@ -9,11 +9,11 @@ def localProperties = new Properties()
 localProperties.load(new FileInputStream(rootProject.file("local.properties")))
 
 android {
-    compileSdkVersion ApplicationConfig.compileSdk
+    compileSdk ApplicationConfig.compileSdk
 
     defaultConfig {
-        minSdkVersion ApplicationConfig.minSdk
-        targetSdkVersion ApplicationConfig.targetSdk
+        minSdk ApplicationConfig.minSdk
+        targetSdk ApplicationConfig.targetSdk
         versionCode ApplicationConfig.versionCode
         versionName ApplicationConfig.versionName
 
@@ -74,7 +74,6 @@ android {
 
 dependencies {
     implementation fileTree(dir: "libs", include: ["*.jar"])
-    implementation Libs.kotlin_stdlib_jdk7
     implementation Libs.androidx_core_core_ktx
     implementation Libs.appcompat
     implementation Libs.material

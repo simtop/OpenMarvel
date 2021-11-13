@@ -32,7 +32,7 @@ object Versions {
 
     const val io_mockk: String = "1.11.0"
 
-    const val com_android_tools_build_gradle: String = "4.1.1"
+    const val com_android_tools_build_gradle: String = "7.0.3"
 
     const val androidx_core_core_ktx: String = "1.3.2"
 
@@ -50,8 +50,6 @@ object Versions {
 
     const val lint_gradle: String = "27.1.1"
 
-    const val viewbinding: String = "4.1.1"
-
     const val appcompat: String = "1.2.0"
 
     const val junit_ktx: String = "1.1.2"
@@ -59,8 +57,6 @@ object Versions {
     const val material: String = "1.2.1"
 
     const val kluent: String = "1.64"
-
-    const val aapt2: String = "4.1.1-6503028"
 
     const val glide: String = "4.11.0"
 

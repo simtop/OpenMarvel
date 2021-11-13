@@ -2,6 +2,7 @@ buildscript {
     repositories {
         google()
         mavenCentral()
+        gradlePluginPortal()
     }
     dependencies {
         classpath(Libs.com_android_tools_build_gradle)
@@ -13,14 +14,6 @@ buildscript {
 
 plugins {
     buildSrcVersions
-}
-
-
-allprojects {
-    repositories {
-        google()
-        mavenCentral()
-    }
 }
 
 tasks.register("clean", Delete::class) {
